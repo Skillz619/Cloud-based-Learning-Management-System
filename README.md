@@ -30,6 +30,8 @@ npm start
 
 **Cloud :** AWS cloud - Deployed via EC2 with Load balancing(ALB) and ALG.
 
+**Containerization :** Docker 
+
 # Design Choices
 
 ## Backend Development
