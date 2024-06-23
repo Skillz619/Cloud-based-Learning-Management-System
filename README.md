@@ -1,83 +1,157 @@
-# Getting Started with Create React App
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/JnIGdh-D)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Cloud Based Learning Management System
 
-## Available Scripts
 
-Follow the steps to run in local
+An overview of the project structure. For example:
 
-### `CD FRONTEND`
+- `backend/`: Contains the backend code.
+- `frontend/`: Contains the frontend code.
+- `Diagrams/`: Contains diagrams related to the project.
 
-### `npm start`
 
-new terminal 
 
-### `CD BACKEND`
+# **Starting the Backend**
+```
+cd backend
+npm start
+```
 
-### `npm start`
+# **Starting the Frontend**
+```
+cd frontend
+npm start
+```
 
-<hr>
-In the project directory, you can run:
+# **Tech Stack**
+**Frontend:** React JS
 
-### `npm start`
+**Backend:** Node JS
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Database:** MongoDB Atlas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Deployment :** EC2 with Load balancing(ALB) and ALG
 
-### `npm test`
+# Design Choices
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Backend Development
 
-### `npm run build`
+### Backend Schemas and Routes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Implemented robust backend schemas and routes for essential entities such as students, faculty, admin, assignments, announcements, quizzes, grades. This ensures a well-structured and organized data flow within the application.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Scalability through Deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Opted for EC2 with Load Balancing during deployment, ensuring scalability and reliability. This choice enables the application to efficiently handle varying loads, distributing traffic across multiple instances for improved performance.
 
-### `npm run eject`
+### Database Choice
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Utilized MongoDB Atlas as the database solution. MongoDB's NoSQL architecture provides flexibility in handling diverse data types, facilitating efficient storage and retrieval of complex data structures relevant to the project.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Authentication and Authorization
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Implemented JSON Web Token (JWT) based authentication for secure user sessions and authorization. JWTs provide a stateless approach to authentication, enhancing scalability and security.
+- Utilized industry-standard bcrypt library for hashing and salting user passwords before storage, ensuring robust protection against brute-force attacks.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Code Structure and Organization
 
-## Learn More
+- Followed a modular approach by separating concerns into different modules (e.g., controllers, services, models), promoting code reusability, maintainability, and testability.
+- Leveraged middleware functions for common operations like error handling, request validation, and logging, improving code organization and consistency.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### API Design and Documentation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Designed a RESTful API adhering to best practices, ensuring a consistent and intuitive interface for client-side interactions.
+- Documented the API using tools like Swagger or Postman, providing clear and comprehensive information for developers to understand and consume the API effectively.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Frontend Architecture and User Interface Design:**
 
-### Analyzing the Bundle Size
+1. **Comprehensive Frontend Architecture:**
+   - Designed a comprehensive frontend architecture that encompasses key user interfaces, including the home page,creating subjects, posting quizzes, grading student, viewing grades. This design choice ensures a cohesive and seamless user experience.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. **User-Focused UI Design:**
+   - Prioritized user experience by focusing on user interfaces such as sign-up, login, and intuitive navigation across key pages. This design approach enhances user engagement and satisfaction.
 
-### Making a Progressive Web App
+3. **Documentation and Diagrams:**
+   - Included detailed diagrams and a README file as part of the frontend architecture. This documentation provides clarity to developers and stakeholders, aiding in understanding the project's structure and facilitating smoother collaboration.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. **Integrated Frontend with Backend:**
+   - Integrated frontend components seamlessly with the backend, ensuring a cohesive and responsive application. This design choice enhances data flow and interaction between different layers of the application.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# **XP Values**
 
-### Deployment
+1. **Communication:**
+   - Implemented a diverse set of communication channels, including weekly Zoom and WhatsApp status calls, supplemented by a dedicated collaboration platform (e.g., Slack or Microsoft Teams). This multi-channel approach facilitated real-time communication, quick updates, and dynamic discussions, fostering a more connected and agile development environment.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2. **Feedback:**
+   - Instituted iterative review sessions at key development milestones, beyond regular status updates. Utilizing collaborative tools like Zoom and shared documents, these sessions allowed for real-time feedback from team members and stakeholders. This iterative feedback approach ensured swift adjustments, promoting a responsive and user-focused development cycle.
 
-### `npm run build` fails to minify
+# **UI WIRE FRAMES**
+[LMSWireframe Diagrams.pdf](https://github.com/gopinathsjsu/teamprojectsection-01-cmpe202-tuesday-kinetic_spring/blob/0808d8673349199cbbd294c2f01fe11d711a4a86/Diagrams/Frontend/LMSWireframe%20Diagrams.pdf)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# **Features Set**
+
+
+1. **User Authentication and Role-Based Access Control**:
+   Implemented a secure user authentication system that allows Faculty, Students, and Admins to log in securely. Use role-based access control to enforce different levels of permissions and access privileges based on user roles. This ensures that each user can only access functionalities and information relevant to their role within the LMS.
+
+2. **Homepage Customization Based on User Role**:
+   Customize the homepage of the LMS based on the logged-in user's role. Faculty members should see a dashboard displaying courses they are teaching across different semesters, along with options to manage course content and grading. Students should see a list of their enrolled courses, upcoming assignments, and grades. Admins have access to course management tools and administrative functions.
+
+
+3. **Course Management for Faculty**:
+   Provide Faculty members with comprehensive course management tools to view, add, edit, and organize courses across different semesters. This includes the ability to upload course materials, set assignments and quizzes, post announcements, and manage student enrollment.
+
+4. **Course Enrollment and Assignment Management**:
+   Implement features for course enrollment, allowing Students to browse available courses and enroll in them. Admins should have the capability to assign Faculty members to teach specific courses for upcoming semesters, managing course allocations efficiently within the system.
+
+
+
+5. **Content Management**:
+   Enable Faculty to manage course content effectively by providing tools to upload, organize, and update course materials such as lectures, readings, and multimedia resources. Students should have access to view and download published course content, including assignments, quizzes, and supplementary materials.
+
+6. **Grading System**:
+   Develop a robust grading system that allows Faculty to evaluate and assign grades for student submissions. Provide a user-friendly interface for Faculty to input grades, provide feedback, and communicate assessment results to students. Students should be able to view their grades and feedback for each course they are enrolled in.
+
+7. **Profile Management**:
+   Offer users (Faculty, Students) have the ability to manage their profile information within the LMS. This includes updating personal details, contact information, and notification preferences to tailor their LMS experience according to individual preferences.
+
+8. **Announcements and Communication Tools**:
+   Implement features for Faculty to post announcements and communicate important updates to students within each course. Include messaging or notification functionalities to facilitate effective communication between Faculty and students regarding course-related matters.
+
+
+9. **Assignment and Quiz Management**:
+    Allow Faculty to create, manage, and distribute assignments and quizzes within the LMS. Students should be able to access assigned tasks, submit their work online, and receive automated feedback or grades based on Faculty evaluations.
+
+
+10. **RESTful API Development**:
+    Build RESTful APIs to support various LMS functionalities, allowing seamless integration with the front-end user interfaces (UIs) and facilitating data exchange between different components of the system. Ensure APIs are well-documented, secure, and efficient in handling requests and responses.
+
+11. **Cloud Deployment**:
+    Deploy the LMS backend (including APIs and database) on a cloud platform such as AWS (Amazon Web Services) to ensure scalability, reliability, and accessibility. Utilize auto-scaling features and load balancers to handle varying levels of user traffic and ensure high availability of the application.
+
+
+
+12. **Responsive UI Design and Wireframes**:
+    Create intuitive and responsive user interfaces (UIs) for the LMS, ensuring optimal user experience across devices (desktops, tablets, mobile phones). Develop wireframes and design mockups for key screens (e.g., course dashboard, profile settings) to visualize user interactions and navigation paths within the application.
+
+# **USE CASE Diagram**
+
+![Use Case Diagram.jpeg](https://github.com/gopinathsjsu/teamprojectsection-01-cmpe202-tuesday-kinetic_spring/blob/0808d8673349199cbbd294c2f01fe11d711a4a86/Diagrams/Backend/Use%20Case%20diagram.jpeg)
+
+
+# **DEPLOYMENT DIAGRAM**
+![DeploymentDiagram.png](https://github.com/gopinathsjsu/teamprojectsection-01-cmpe202-tuesday-kinetic_spring/blob/7fdc35c16ace4423dcfdc9a41a3c5b3bdc6211e9/Diagrams/Backend/DeploymentDiagram.png)
+
+
+# **COMPONENT DIAGRAM**
+![componenet diagram](https://github.com/gopinathsjsu/teamprojectsection-01-cmpe202-tuesday-kinetic_spring/assets/160942470/833c6dce-a893-44d6-83d3-ffc1cf8f5494)
+
+
+# **ARCHITECTURE DIAGRAM**
+![Architecture Diagram](https://github.com/gopinathsjsu/teamprojectsection-01-cmpe202-tuesday-kinetic_spring/assets/160942470/538a80b2-22fa-4e77-a499-690656217502)
+
+
