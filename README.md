@@ -28,7 +28,7 @@ npm start
 
 **Database:** MongoDB Atlas
 
-**Deployment :** EC2 with Load balancing(ALB) and ALG
+**Cloud :** AWS cloud - Deployed via EC2 with Load balancing(ALB) and ALG.
 
 # Design Choices
 
